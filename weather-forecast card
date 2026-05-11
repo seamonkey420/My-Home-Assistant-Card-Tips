@@ -1,0 +1,31 @@
+show_current: false
+show_forecast: true
+type: weather-forecast
+entity: weather.forecast_yourcity
+forecast_type: daily
+secondary_info_attribute: none
+grid_options:
+  columns: 18
+  rows: 4
+forecast_slots: 5
+card_mod:
+  style: |
+    div.forecast-item-label {
+      font-size: 20px;
+      color: white;
+      position: relative;
+      margin-top: -0px !important;
+      margin-bottom: -15px !important;
+    }
+    div.forecast-image-icon {
+      size: 20px;      
+      position: relative;
+      top: 20px;
+      margin-bottom: 30px;
+    }
+    ha-card > div.forecast {
+      font-size: 25px;
+    }
+    ha-card > div.forecast > div:nth-child(1n) > div.temp {
+      font-size: 40px;
+    }

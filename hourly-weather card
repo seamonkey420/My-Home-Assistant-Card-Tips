@@ -1,0 +1,118 @@
+type: custom:hourly-weather
+entity: weather.forecast_yourcity
+name: null
+show_wind: speed
+round_temperatures: true
+show_precipitation_probability: false
+icon_fill: 1
+hide_bar: false
+show_date: false
+offset: "0"
+label_spacing: "1"
+icons: true
+colors:
+  clear-night:
+    foreground: white
+    background: "#242424"
+  cloudy:
+    foreground: grey
+    background: "#242424"
+  fog:
+    foreground: "#d6d5c8"
+    background: "#242424"
+  hail:
+    foreground: "#dc75fc"
+    background: "#242424"
+  lightning:
+    foreground: "#ebfbff"
+    background: "#242424"
+  lightning-rainy:
+    foreground: "#ebfbff"
+    background: "#242424"
+  partlycloudy:
+    foreground: "#ded880"
+    background: "#242424"
+  pouring:
+    foreground: blue
+    background: "#242424"
+  rainy:
+    foreground: "#779db0"
+    background: "#242424"
+  snowy:
+    foreground: "#eafbff"
+    background: "#242424"
+  snowy-rainy:
+    foreground: "#bef2ff"
+    background: "#242424"
+  sunny:
+    foreground: "#fcee16"
+    background: "#242424"
+  windy:
+    foreground: orange
+    background: "#242424"
+  windy-variant:
+    foreground: orange
+    background: "#242424"
+  exceptional:
+    foreground: red
+    background: "#242424"
+icon_map:
+  clear-night: wi:clear-night
+  cloudy: wi:cloudy
+  fog: wi:fog
+  hail: wi:hail
+  lightning: wi:lightning
+  lightning-rainy: wi:lightning-rainy
+  partlycloudy: wi:partlycloudy
+  pouring: wi:pouring
+  rainy: wi:rainy
+  snowy: wi:snowy
+  snowy-rainy: wi:snowy-rainy
+  sunny: wi:sunny
+  windy: wi:windy
+  windy-variant: wi:windy-variant
+grid_options:
+  columns: 18
+  rows: 4
+num_segments: "5"
+card_mod:
+  prepend: true
+  style:
+    ha-card: |
+      ha-card {
+        background: !important;
+      }
+    weather-bar$: |
+      .bar {
+        height: 0px !important;
+      }
+      .bar > div {
+        height: 0x !important;
+        background-color: transparent !important;
+      }
+      .date, .hour {
+        font-size: 20px !important;
+        font-weight: !important;
+        color: white !important;
+        position: relative;
+        margin-top: -20px !important;
+        margin-bottom: 0px !important;
+      }
+      .temperature {
+        display: !important;
+        font-size: 40px !important;
+        margin-top: 52px !important;
+        margin-bottom: 0px !important;
+      }
+      .wind {
+        display: !important;
+        font-size: 20px !important;
+        margin-bottom: 50px !important;
+      }
+    weather-bar$ha-icon$: |
+      ha-svg-icon {
+        width: 40px !important;
+        height: 40px !important;
+        position: relative;
+        margin-top: 105px !important;
+      }
